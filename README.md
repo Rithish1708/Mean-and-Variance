@@ -1,5 +1,6 @@
-# Exp 1: Mean and variance of a discrete distribution
-# Date: 22 / 05 /2025
+#  Mean and variance of a discrete  distribution
+
+
 # Aim : 
 
 To find mean and variance of arrival of objects from the feeder using probability distribution
@@ -9,7 +10,7 @@ To find mean and variance of arrival of objects from the feeder using probabilit
 
 Python and Visual components tool
 
-# Theory:
+# Theory:A
 
 The expectation or the mean of a discrete random variable is a weighted average of all possible
 values of the random variable. The weights are the probabilities associated with the corresponding values. 
@@ -47,38 +48,34 @@ It shows the distance of a random variable from its mean. It is calcualted as
 ![image](https://user-images.githubusercontent.com/103921593/229993174-5b67e57e-3e01-4ac4-9f83-410a932b22bf.png)
 
 # Program :
-```
-Developed by : Sanjay kumar .B
-Register number : 24000581
-```
-```
-import numpy as np
-L=[int(i) for i in input().split()]
-N=len(L); M=max(L) 
-x=list();f=list()
-for i in range (M+1):
-    c = 0
-    for j in range(N):
-        if L[j]==i:
-            c=c+1
-    f.append(c)
-    x.append(i)
-sf=np.sum(f)
-p=list()
-for i in range(M+1):
-    p.append(f[i]/sf) 
-mean=np.inner(x,p)
-EX2=np.inner(np.square(x),p)
-var=EX2-mean**2 
-SD=np.sqrt(var)
-print("The Mean arrival rate is %.3f "%mean)
-print("The Variance of arrival from feeder is %.3f "%var) 
+
+DEVELOPED:YUGESH M
+
+
+REGISTER NO:212224040376
 ```
 
+
+import numpy as np
+
+L = list(map(int, input().split()))
+f = np.bincount(L)
+p = f / f.sum()
+x = np.arange(len(f))
+
+mean = np.dot(x, p)
+var = np.dot(x**2, p) - mean**2
+SD = np.sqrt(var)
+
+print(f"The Mean arrival rate is {mean:.3f}")
+print(f"The Variance of arrival from feeder is {var:.3f}")
+print(f"The Standard deviation of arrival from feeder is {SD:.3f}")
+
+```
 
 
 # Output : 
-![Screenshot 2024-12-07 112446](https://github.com/user-attachments/assets/e6bab57d-3e28-4b50-a044-1697dae277aa)
+![Screenshot 2025-05-14 131656](https://github.com/user-attachments/assets/269ee2a7-5d8b-4a8e-9230-788ba8285c4a)
 
 # Results :
 The mean and variance of arrivals of objects from feeder using probability distribution are calculated.
