@@ -49,10 +49,10 @@ It shows the distance of a random variable from its mean. It is calcualted as
 
 # Program :
 
-DEVELOPED:YUGESH M
+DEVELOPED:RITHISH R
 
 
-REGISTER NO:212224040376
+REGISTER NO:212224040278
 ```
 
 
